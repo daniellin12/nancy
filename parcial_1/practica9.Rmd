@@ -1,5 +1,5 @@
 ---
-title: "Practica 6 "
+title: "Practica 9 "
 author: "Dani"
 date: "10-Marzo-2022"
 output: 
@@ -16,10 +16,9 @@ output:
 library(ggplot2)
 library(tidyverse)
 ```
-# Practica 4
+# Practica 9
 ## Cargar la bade de datos EconomistData.csv
 ```{r}
-#lectura de paquetes en excel
 library(readxl)
 datoo<-read.csv("C:\\Users\\dani\\Documents\\RStudio\\nancy\\EconomistData.csv")
 datoo
