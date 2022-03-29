@@ -272,3 +272,5 @@ barplot(newdata,
 ggplot(data = MisDatos, aes(x = Edad, y = Final), main = "Promedio final de los alumnos por edad") + 
   geom_point(alpha = 0.7, aes(color = Clases, shape = Clases))
 ```
+
+```{r}
