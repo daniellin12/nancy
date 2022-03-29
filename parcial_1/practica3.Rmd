@@ -1,0 +1,22 @@
+---
+title: "Practica 3 "
+author: "Dani"
+date: "8-Marzo-2022"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      smooth_scroll: false
+    number_sections: true
+    theme: united 
+    highlight: tango
+---
+
+# Practica 3
+## lectura de paquetes en excel
+```{r}
+library(readxl)
+hijos2<- read.table(file="baseprueba.data", header=TRUE, sep = "\t")
+str(hijos2)
+```

@@ -1,0 +1,37 @@
+---
+title: "Mi primer documento RMarckdown"
+author: "Dani"
+date: "07-Marzo-2022"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      smooth_scroll: false
+    number_sections: true
+    theme: united 
+    highlight: tango
+---
+
+# Titulo principal
+## Titulo de segundo nivel
+### Titulo de tercer nivel
+
+*Texto en cursiva*
+**Texto en negritas**
+***Texto en cursiva y negritas***
+
+## Quarterly Results {.tabset .tabset-fade .tabset-pills}
+
+*Texto en cursiva*
+
+**Texto en negritas**
+
+***Texto en cursiva y negrita***
+
+$f(x) x^2-5y_2$
+
+```{r}
+ x<-100
+```
+

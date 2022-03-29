@@ -1,0 +1,64 @@
+---
+title: "Practica 6 "
+author: "Dani"
+date: "10-Marzo-2022"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      smooth_scroll: false
+    number_sections: true
+    theme: united 
+    highlight: tango
+---
+```{r}
+library(ggplot2)
+library(tidyverse)
+```
+# Practica 4
+## Cargar la bade de datos EconomistData.csv
+```{r}
+#lectura de paquetes en excel
+library(readxl)
+datoo<-read.csv("C:\\Users\\dani\\Documents\\RStudio\\nancy\\EconomistData.csv")
+datoo
+```
+## crear un grafico de sispersion con cpi en el eje x y hdi en el eje y
+```{r}
+ggplot(data=datoo)+
+  geom_point(mapping = aes(x= CPI, 
+                          y= HDI),alpha=0.4)
+```
+## colorar de azul los puntos del garfico anterior 
+```{r}
+ggplot(data=datoo)+
+  geom_point(mapping = aes(x= CPI, 
+                           y= HDI),alpha=0.4,color= "blue")
+```
+## asignale el color a los puntos a la variable region 
+```{r}
+ggplot(data=datoo)+
+  geom_point(mapping = aes(x= CPI, 
+                           y= HDI,color=Region),alpha=0.4)
+
+```
+## manten asignado el color a ala region, aumente el tamaño de los puntos configurando el tamaño en 2 
+```{r}
+ggplot(data=datoo)+
+  geom_point(mapping = aes(x= CPI, 
+                           y= HDI,color=Region),size=2)
+```
+## manten el coor asignado a la region, asigne el tamaño de los puntos a HDI.Rank
+```{r}
+ggplot(data=datoo)+
+  geom_point(mapping = aes(x= CPI, 
+                           y= HDI,color=Region,size=HDI.Rank))
+
+```
+## cambia la forma de los puntos 
+```{r}
+ggplot(data=datoo)+
+  geom_point(mapping = aes(x= CPI, 
+                           y= HDI,color=Region,shape= Region))
+```

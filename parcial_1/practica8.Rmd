@@ -1,0 +1,27 @@
+---
+title: "Practica 8 "
+author: "Dani"
+date: "10-Marzo-2022"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      smooth_scroll: false
+    number_sections: true
+    theme: united 
+    highlight: tango
+---
+
+# Practica 8
+## cargar la base de datos aircuality y graficar las temparaturas con geom_line
+```{r}
+library(ggplot2)
+library(tidyverse)
+airquality
+ggplot(data=airquality)+
+  geom_line(mapping = aes(x= Day, 
+   y= Temp),alpha=0.4,color= "blue")
+```
+
+

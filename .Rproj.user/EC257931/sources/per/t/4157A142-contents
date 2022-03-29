@@ -1,0 +1,18 @@
+#leer tabla de datos en rstuido con read.table
+datos_art<-read.table(file = "C:\\Users\\dani\\Documents\\RStudio\\Nueva carpeta\\dato.data",header = TRUE)
+datos_art2<-read.csv(file = "C:\\Users\\dani\\Documents\\RStudio\\Nueva carpeta\\datos.csv",header = TRUE)
+datos_art
+datos_art2
+
+
+
+#lectura de paquetes en excel
+install.packages("realxl")
+library(readxl)
+hijos<-read_excel(file.choose())
+as.data.frame(hijos)
+
+
+#lecrura de un archivo tipo data
+hijos2<-read.table(file = "C:\\Users\\dani\\Documents\\RStudio\\Nueva carpeta\\baseprueba.data",header = TRUE)
+hijos2

@@ -1,0 +1,81 @@
+---
+title: "Practica 4"
+author: "Dani"
+date: "07-Marzo-2022"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      smooth_scroll: false
+    number_sections: true
+    theme: united 
+    highlight: tango
+---
+
+# Practica 4
+## Cargar vase de datos
+```{r}
+data("cars")
+ data.frame(cars)
+```
+
+## mostrar el conjunto de datos 
+```{r}
+ summary(cars)
+```
+
+## numero de filas y numero de columnas
+```{r}
+ nrow(cars)
+ncol(cars)
+```
+
+## muestra el tamaño del archivo
+```{r}
+ object.size(cars)
+```
+## mostrar el nombre de las columnas
+```{r}
+ names(cars)
+```
+## mostrar los ultimos 10 registros
+```{r}
+ tail(cars,10)
+```
+## mostrar los primeros 6 registros
+```{r}
+ head(cars,6)
+```
+## muestra los registros exactamente a la mita
+```{r}
+ cars[25,]
+```
+##muetra los valores de la columna speed
+```{r}
+ summary(cars)
+```
+cars$speed
+## muestra  speed mayor a 20
+```{r}
+ newdato<-subset(cars,speed>20,)
+ newdato
+```
+## muestra el registro 2 y 20
+```{r}
+ cars[2,]
+ cars[20,]
+```
+## muestra  speed igual a 20
+```{r}
+ newdato2<-subset(cars,speed==20,"dist")
+ newdato2 
+```
+## guarda todas las velocidades que sean mayor a 20
+```{r}
+ sub1<-subset(cars,speed>=20,"speed")
+ sub1
+```
+
+
+

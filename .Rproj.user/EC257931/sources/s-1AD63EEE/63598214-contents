@@ -1,0 +1,125 @@
+##cosas de clase 
+scan()->x #guada los datos  en forma de vector 
+data.frame(x,x,x)->s#sirve para almacenar los datos en una matriz
+
+
+
+
+
+
+#ayuda
+help(mean)
+?mean
+help.search("median")
+#tipo de datos 
+doub<-4
+doub=4 
+
+doub
+
+int = as.integer(3)
+int
+
+logi=FALSE
+logi
+
+char1="hola"
+char1
+
+char2<-"5+6"
+char2
+
+typeof(doub)
+typeof(int)
+typeof(char1)
+
+2^3
+9/6 
+9%%6
+
+a=2+2 # resultado de 2+2 se asigna a la variable a
+b=3*2 # resultado de 3*2 se asigna a la variable b
+b-a->c # resultado de b-a se asigna a la variable c
+
+a
+b
+c
+
+a==5
+a==4 & b<2
+a==4 | b<2
+a==4 | b<2 & c !=
+#vectores
+vec=c(1, 3, 14)
+vec
+#marices
+mat1 <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3) # por defecto las matrices se completan por columna
+mat1
+
+mat2 <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3, byrow = TRUE) # byrow = TRUE indica que complete la matriz por filas
+mat
+
+#array
+arr <- array(c(1,2,3,4,5,6,7,8), dim = c(2,2,2))
+arr
+#matrices
+m <- matrix(c(1,1,2,1),2,2)
+m
+
+#factores y factores ordenados
+fac <- factor(c('H','M','M','H','H','M'), levels = c('H','M'))
+ord <- ordered(c(1,2,1,2,3,1,2,1,2), levels = c(1,2,3))
+
+ord <- ordered(c(1,2,1,2,3,1,2,1,2), levels = c(1,2,3))
+ord2 <- ordered(c(1,2,1,2,3,1,2,1,2), levels = c(2,3,1))
+ord3 <- ordered(c(1,2,1,2,3,1,2,1,2), levels = c(3,1,2))
+
+fac <- factor(c('H','M','M','H','H','M'), levels = c('H','M'))
+fac2 <- factor(c('H','M','M','H','H','M'), levels = c('M','H'))
+
+#data frames y listas 
+a <- c(1,5,4)
+b <- c("hola", "adiós", "hasta luego")
+c <- c(TRUE, FALSE, FALSE)
+d <- c(1,2,3,4,5)
+dataframe <- data.frame(a, b, c)
+dataframe
+
+list1 <- list(a, b, c)
+list1
+
+list2 <- list(a, b, c, d)
+list2
+
+#aceso a los elementos de las estructuras de datos
+vec <- c(1, 3, 14)
+vec[3]
+
+mat1 <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+mat1
+
+mat1[2, 3]
+
+arr <- array(c(1,2,3,4,5,6,7,8), dim = c(2,2,2)) # el ultimo 2 indica que son dos matrices
+
+arr[2, 1, 2] # el elemento de la segunda fila primera columna de la segunda matriz
+
+mat1[c(1,2), 3] # los elementos (1, 3) y (2, 3) de l
+
+mat1[1,]
+
+mat1[, c(1,2)]
+
+fac[2]
+
+ord[c(2, 5)]
+
+dataframe$a
+
+dataframe$a[1]
+
+dataframe[1,]
+
+
+
+

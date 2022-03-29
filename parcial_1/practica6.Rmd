@@ -1,0 +1,45 @@
+---
+title: "Practica 6 "
+author: "Dani"
+date: "10-Marzo-2022"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      smooth_scroll: false
+    number_sections: true
+    theme: united 
+    highlight: tango
+---
+
+# Practica 6
+## Graficar temp con puntos azules
+```{r}
+data("airquality")
+library(dplyr)
+newdata<-summarize(group_by(airquality,Month  ), 
+          promedio_temp = mean(Temp,na.rm = TRUE))
+
+barplot(newdata$promedio_temp,
+        main= 'Promedio mensual de temperaturas',
+        xlab=' Mes',
+        ylab = 'Promedio mensual', horiz = FALSE,
+        col= "blue")
+
+barplot(newdata$promedio_temp,
+        main= 'Promedio mensual de temperaturas',
+        xlab=' Mes',
+        ylab = 'Promedio mensual', horiz = TRUE,
+        col= "blue")
+```
+## grafica de solar vs ozone
+```{r}
+plot(airquality$Solar.R,airquality$Ozone,
+     type="p",
+     main="Ozono vs Radiacion solar",
+     xlab="Radiacion",
+     ylab="Ozono",
+     cex=0.5,col = "dark blue")
+```
+

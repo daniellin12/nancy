@@ -1,0 +1,68 @@
+---
+title: "Practica 5 "
+author: "Dani"
+date: "15-Marzo-2022"
+output: 
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      smooth_scroll: false
+    number_sections: true
+    theme: united 
+    highlight: tango
+---
+
+# Practica 4
+## Cargar vase de datos
+```{r}
+data("airquality")
+ data.frame(airquality)
+
+```
+## Muestra la clase la estructura de la base de datos  
+```{r}
+  class(airquality)
+```
+## muestra el tamaño del archivo de la base de datos
+```{r}
+ object.size(airquality)
+```
+## Muestra el resumen de la base de datos  
+```{r}
+ summary(airquality)
+```
+## mostrar los primeros 6 registros
+```{r}
+ head(airquality,6)
+```
+## crea un conjuntp de datos con Ozone, Wind y Temp y sus primeros 6 regirstros
+```{r}
+library(dplyr) 
+newdato1<-select(airquality, Ozone, Wind, Temp)
+ head(newdato1,6)
+```
+## Crea un subconjunto de datos con todas las columnas, excepto Wind y Day. Posteriormente, filtra las radiaciones solares del mes 8 que sean mayores a 200
+
+```{r}
+filter(select(airquality, -Wind, -Day), Month==8, Solar.R>200)
+```
+
+## Muestra la variable Wind y Temp de los días 1, 5 y 10
+
+```{r}
+select(filter(airquality, Day %in% c(1, 5, 10)), Wind, Temp)
+```
+
+## Convierte el atributo Temp de grados centígrados a farenheit
+
+```{r}
+mutate(airquality, Temp = (Temp * (9/5)) + 32)
+```
+
+## Agrupa por días y muestra el resumen de los promedios de los atributos Wind y Temp
+
+```{r}
+summarize(group_by(airquality, Day), promedio_wind = mean(Wind, na.rm = TRUE),
+                     promedio_temp = mean(Temp,na.rm = TRUE))
+```
